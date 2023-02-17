@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import Navbar from './Navbar';
 
 function Messpage() {
     const [data, setData] = useState("");
@@ -13,6 +14,7 @@ function Messpage() {
     },[])
     return (
         <div>
+            <Navbar></Navbar>
             <div className='msg'>
                 <h1 style={{color:"orange"}}>{data.type}</h1>
                 <h1>{data.meal}</h1>
