@@ -16,7 +16,7 @@ function Navbar() {
   },[])
   const navstl = {
     position:'sticky',
-    top:"10%",
+    top:"5%",
     display:'flex',
     alignItems:'center',
     justifyContent:'space-around',

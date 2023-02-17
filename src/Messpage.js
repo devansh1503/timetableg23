@@ -14,7 +14,6 @@ function Messpage() {
     },[])
     return (
         <div>
-            <Navbar></Navbar>
             <div className='msg'>
                 <h1 style={{color:"orange"}}>{data.type}</h1>
                 <h1>{data.meal}</h1>
