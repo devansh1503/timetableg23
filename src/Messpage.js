@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 function Messpage() {
     const [data, setData] = useState("");
     async function fetchData(){
-        const res = await axios.get("https://timetable-amber.vercel.app/mess")
+        const res = await axios.get("https://timetable-vert.vercel.app/mess")
         console.log(res)
         setData(res.data)
     }

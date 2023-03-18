@@ -7,8 +7,8 @@ import Login from './Login';
 function Mainpage() {
   const [data, setData] = useState([]);
   async function fetchData() {
-    const res = await axios.get("https://timetable-amber.vercel.app/time")
-    console.log(res)
+    const res = await axios.get("https://timetable-vert.vercel.app/time")
+    console.log(res.data)
     setData(res.data)
   }
   useEffect(() => {
@@ -22,7 +22,13 @@ function Mainpage() {
       console.log(token)
     }
   }, [])
-
+  if(data===""){
+    return (
+      <div className='msg'>
+        NO CLASSES TODAY!
+      </div>
+    )
+  }
   return (
     <div>
       <div className='msg'>
