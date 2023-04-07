@@ -31,21 +31,18 @@ function Mainpage() {
   }
   return (
     <div>
-      <div className='msg'>
-        <table>
-          <th>Subject</th>
-          <th>Room</th>
-          <th>Time</th>
-          {data.map((item) => {
-            return <tr>
-              <td>{item.subject}</td>
-              <td>{item.room}</td>
-              <td>{item.time}</td>
-            </tr>
-          })}
-        </table>
-      </div>
-    </div>
+            <div>
+                {
+                    data.map((item)=>{
+                        return <div className='msg'>
+                            <h2>{item.subject}</h2>
+                            <h2>{item.time}</h2>
+                            <h2>{item.room}</h2>
+                        </div>
+                    })
+                }
+            </div>
+        </div>
   )
 }
 

@@ -15,12 +15,12 @@ function Navbar() {
     console.log(dat)
   },[])
   const navstl = {
-    position:'sticky',
-    top:"5%",
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'space-around',
-    zIndex:'100',
+   width:'100%',
+   backgroundColor:'black',
+   height:'fit-content',
+   padding:'20px',
+   position:'sticky',
+   top:'0%'
   }
   const ulstyle = {
     listStyle: "none",
@@ -38,9 +38,6 @@ function Navbar() {
         </li>
 
       </ul>
-      
-      {/* <div><img style={{width:'70px', borderRadius:'50%'}} src={`${img}`}></img></div>
-      <h3>{dat.displayName}</h3> */}
 
       
     </div>

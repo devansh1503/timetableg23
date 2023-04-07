@@ -8,8 +8,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(45, 45, 45);
-  height: 50vh;
-
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -19,20 +17,21 @@ body {
   border-radius: 25px;
   padding: 30px;
   max-width: 80vw;
-  color: rgb(71, 234, 255);
+  color: tomato;
   box-shadow:10px 10px 20px 5px black;
+  margin-bottom: 20px;
 }
 .link{
   text-decoration: none;
   color: white;
   font-size: 23px;
-  background-color: rgb(71, 157, 255);;
+  background-color: tomato;
   padding: 10px;
   border-radius: 15px;
 }
 th{
   font-size: 23px;
-  border-bottom: 2px solid rgb(71, 234, 255);;
+  border-bottom: 2px solid tomato;
 }
 td{
   padding: 5px;

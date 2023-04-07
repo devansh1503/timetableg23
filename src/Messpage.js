@@ -3,20 +3,26 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar';
 
 function Messpage() {
-    const [data, setData] = useState("");
-    async function fetchData(){
-        const res = await axios.get("https://timetable-vert.vercel.app/mess")
-        console.log(res)
-        setData(res.data)
+    const [data, setData] = useState([]);
+    async function fetchData() {
+        await axios.get("https://timetable-vert.vercel.app/mess").then((res)=>{
+            setData(res.data)
+        })
     }
-    useEffect(()=>{
-      fetchData()
-    },[])
+    useEffect(() => {
+        fetchData()
+    }, [])
     return (
         <div>
-            <div className='msg'>
-                <h1 style={{color:"orange"}}>{data.type}</h1>
-                <h1>{data.meal}</h1>
+            <div>
+                {
+                    data.map((item)=>{
+                        return <div className='msg'>
+                            <h2>{item.subject}</h2>
+                            <h2>{item.time}</h2>
+                        </div>
+                    })
+                }
             </div>
         </div>
     )
